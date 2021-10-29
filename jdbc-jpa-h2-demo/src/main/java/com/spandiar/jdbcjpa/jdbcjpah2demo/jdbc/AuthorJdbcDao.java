@@ -29,10 +29,10 @@ public class AuthorJdbcDao {
 			
 			author.setId(rs.getInt("id"));
 			author.setName(rs.getString("name"));
-			author.setDob(rs.getDate("dob"));
+//			author.setDob(rs.getDate("dob"));
 			author.setGender(rs.getString("gender"));
-			author.setCreatedDate(rs.getDate("created_dt"));
-			author.setModifiedDate(rs.getDate("modified_dt"));
+//			author.setCreatedDate(rs.getDate("created_dt"));
+//			author.setModifiedDate(rs.getDate("modified_dt"));
 			
 			return author;
 		}
@@ -72,7 +72,7 @@ public class AuthorJdbcDao {
 				"insert into author (id, name, dob, gender, created_dt, modified_dt) "
 			    	+ "values (?,?,?,?,?,?)",
 			    	  new Object[] {author.getId(), author.getName(), 
-			    			  			new Timestamp(author.getDob().getTime()), 
+//			    			  			new Timestamp(author.getDob().getTime()), 
 			    			  					author.getGender(),
 			    			  					  new Timestamp(new Date().getTime()),
 			    			  					   new Timestamp(new Date().getTime())}
